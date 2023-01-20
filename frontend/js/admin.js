@@ -84,7 +84,6 @@ let createForm = document.getElementById("create")
 
     //-------------delete data------------//
 
-    
 
  let del = document.getElementById("del-form")
     del.addEventListener("submit", async (e) => {
@@ -104,11 +103,5 @@ let createForm = document.getElementById("create")
           .catch((err) => {
             console.log(err);
           });
-        // let res2 = await fetch("https://real-rose-spider-gear.cyclic.app/allnotes", {
-        //   headers: { Authorization: localStorage.getItem("token") },
-        // });
-        // let data = await res2.json();
-        // console.log(data);
-        // display(data);
-      })
+     })
     
