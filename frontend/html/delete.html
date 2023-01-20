@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="../css/delete.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-left">
+            <h1>Jewels</h1>
+            <div class="crud-list">
+                <div>
+                    <div><span class="bx bx-grid-alt"></span>
+                        <a href="./admin.html">Dashboard</a>
+                    </div>
+                    <div><i class="bx bx-folder-plus"></i>
+                        <a href="./add.html">Add Product</a>
+                    </div>
+                    <div>
+                        <i class="bx bx-edit-alt"></i>
+                        <a href="./update.html">Edit Product</a>
+                    </div>
+                    <div><i class="bx bx-message-square-minus"></i>
+                        <a href="./delete.html">Delete Product</a>
+                    </div>
+                    <div>
+                        <i class="bx bx-message"></i>
+                        <a href="">Messages</a>
+                    </div>
+                    <div>
+                        <i class="bx bx-cog"></i>
+                        <a href="">Setting</a>
+                    </div>
+                </div>
+                <div class="log-out"><i class="bx bx-log-out"></i>
+                    <a href="./index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="container-top">
+                <div class="container-top-left">
+                    <span class="bx bx-menu sidebarBtn"></span>
+                    <span>Delete Product</span>
+                </div>
+                <div class="container-top-right">
+                    <img width=30% src="https://www.linkpicture.com/q/IMG_2729_page-0001.jpg" alt="#">
+                    <h4>Hey Chandan</h4>
+                </div>
+            </div>
+            <div class="container-mid">
+                    <div class="fetch">
+                        <div id="edit">
+                            <h2>Fetched Updated Data List</h2>
+                        </div>
+                        <div class="fetchdata">
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="edit">
+                        <div>
+                            <h4>Delete Selected Item</h4>
+                        </div>
+
+                        <div class="form-container">
+                            <form id="del-form">
+                                <input required type="text" id="pro" placeholder="Product ID">
+                                <input type="submit" value="submit" id="submit-btn">
+                            </form>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/admin.js"></script>
+</html>
