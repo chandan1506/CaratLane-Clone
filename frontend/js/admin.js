@@ -85,23 +85,23 @@ let createForm = document.getElementById("create")
     //-------------delete data------------//
 
 
- let del = document.getElementById("del-form")
-    del.addEventListener("submit", async (e) => {
-        e.preventDefault()
-        let id = document.getElementById("pro").value
-        console.log(id)
-        alert(id)
-        let res1 = await fetch(`http://localhost:8080/adminproducts/delete/${id}`, {
-          method: "DELETE",
-        //   headers: { Authorization: localStorage.getItem("token") },
-        })
-          .then((res1) => res1.json())
-          .then((res1) => {
-            alert("DELETED");
-            console.log(res1);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-     })
+//  let del = document.getElementById("del-form")
+//     del.addEventListener("submit", async (e) => {
+//         e.preventDefault()
+//         let id = document.getElementById("pro").value
+//         console.log(id)
+//         alert(id)
+//         let res1 = await fetch(`http://localhost:8080/adminproducts/delete/${id}`, {
+//           method: "DELETE",
+//         //   headers: { Authorization: localStorage.getItem("token") },
+//         })
+//           .then((res1) => res1.json())
+//           .then((res1) => {
+//             alert("DELETED");
+//             console.log(res1);
+//           })
+//           .catch((err) => {
+//             console.log(err);
+//           });
+//      })
     
