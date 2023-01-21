@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin page</title>
-    <link rel="stylesheet" href="../css/update.css">
+    <link rel="stylesheet" href="../css/add.update.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
 </head>
 
@@ -72,11 +72,12 @@
                         </div>
 
                         <div class="form-container">
-                            <form>
-                                <input required type="text" id="seller" placeholder="Enter seller type">
-                                <input required type="text" id="image" placeholder="Enter avatar">
-                                <input required type="number" id="price" placeholder="Enter price">
-                                <input required type="text" id="name" placeholder="Enter name">
+                            <form id="update-form">
+                                <input  type="text" id="pro" placeholder="Product ID">
+                                <input  type="text" id="seller" placeholder="Enter seller type">
+                                <input type="text" id="image" placeholder="Enter avatar">
+                                <input  type="number" id="price" placeholder="Enter price">
+                                <input type="text" id="name" placeholder="Enter name">
                                 <input type="submit" value="submit" id="submit-btn">
 
                             </form>
@@ -88,5 +89,82 @@
         </div>
     </div>
 </body>
-<script src="../js/admin.js"></script>
 </html>
+<script >
+ let bag = [];
+    async function products() {
+        try {
+            let res = await fetch(`http://localhost:8080/adminproducts/products`)
+            let data = await res.json()
+            console.log(data)
+            bag = data
+            renderdata(bag)
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+    products()
+
+    function renderdata(bag) {
+        let display = bag.map((element) => {
+            return `
+    <div id="card">
+      <div id="card-top" style="background-image:url(${element.image}) ;background-size: 100% 100%; border-radius:10px ">
+                      
+                            <p id="seller">${element.seller}</p>
+                            <button id="wishlist"> 
+                                <i class="fa fa-heart-o"  aria-hidden="true" style="font-size:24px;" ></i>
+                                   </button>
+                           
+                         </div>    
+                    <p  id="price">₹${element.price}/-</p>
+                    <p id="name">${element.name}</p>
+                    <div id="trial">
+                        <div>
+                           <button id="tryhome" ><i class="fa fa-home" aria-hidden="true"></i> Book Try at Home</button> 
+                        </div>
+                    <div>
+                       <button id="livevedio"><i class="fa fa-video-camera" aria-hidden="true"></i>live vedio call</button> 
+                    </div>
+                    </div>
+                    <div id=cart>
+                    
+                    <button id="addtocart"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add to Cart</button>
+            </div>
+        </div>`
+        })
+
+        document.querySelector(".fetchdata").innerHTML = display.join(" ")
+    }
+
+    let updateForm = document.getElementById("update-form")
+    updateForm.addEventListener("submit", async (e) => {
+        e.preventDefault()
+        let id = document.getElementById("pro").value
+        let allInputTags = document.querySelectorAll("input")
+        try {
+            let userObj = {}
+            for (let i = 0; i < allInputTags.length; i++) {
+                userObj[allInputTags[i].id] = allInputTags[i].value
+            }
+            let res = await fetch(`http://localhost:8080/adminproducts/update/${id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                    // Authorization: localStorage.getItem("token"),
+                },
+                body: JSON.stringify(userObj)
+            })
+            if(res.ok){
+            alert("notes updated")
+            }else{
+                alert("something went wrong")
+            }
+        } catch (error) {
+            console.log(error.message)
+        }
+    })
+
+
+
+</script>

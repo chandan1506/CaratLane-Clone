@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin page</title>
-    <link rel="stylesheet" href="../css/update.css">
+    <link rel="stylesheet" href="../css/add.update.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
 </head>
 
@@ -55,33 +55,33 @@
                 </div>
             </div>
             <div class="container-mid">
-                    <div class="fetch">
-                        <div id="edit">
-                            <h2>Fetched  Updated Data list</h2>
-                        </div>
-                        <div class="fetchdata">
-                        </div>
-
+                <div class="fetch">
+                    <div id="edit">
+                        <h2>Fetched Updated Data list</h2>
+                    </div>
+                    <div class="fetchdata">
                     </div>
 
-                    
-                    <div class="edit">
-                        <div>
-                            <h4>Add Item</h4>
-                        </div>
+                </div>
 
-                        <div class="form-container">
-                            <form id="create">
-                                <input required type="text" id="seller" placeholder="Enter seller type">
-                                <input required type="text" id="image" placeholder="Enter avatar">
-                                <input required type="number" id="price" placeholder="Enter price">
-                                <input required type="text" id="name" placeholder="Enter name">
-                                <input type="submit" value="submit" id="submit-btn">
 
-                            </form>
-
-                        </div>
+                <div class="edit">
+                    <div>
+                        <h4>Add Item</h4>
                     </div>
+
+                    <div class="form-container">
+                        <form id="create">
+                            <input required type="text" id="seller" placeholder="Enter seller type">
+                            <input required type="text" id="image" placeholder="Enter avatar">
+                            <input required type="number" id="price" placeholder="Enter price">
+                            <input required type="text" id="name" placeholder="Enter name">
+                            <input type="submit" value="submit" id="submit-btn">
+
+                        </form>
+
+                    </div>
+                </div>
                 <!-- </div> -->
             </div>
         </div>
@@ -89,4 +89,82 @@
 </body>
 
 </html>
-<script src="../js/admin.js"></script>
+<script>
+    let bag = [];
+    async function products() {
+        try {
+            let res = await fetch(`http://localhost:8080/adminproducts/products`)
+            let data = await res.json()
+            console.log(data)
+            bag = data
+            renderdata(bag)
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+    products()
+
+
+    function renderdata(bag) {
+        let display = bag.map((element) => {
+            return `
+    <div id="card">
+      <div id="card-top" style="background-image:url(${element.image}) ;background-size: 100% 100%; border-radius:10px ">
+                      
+                            <p id="seller">${element.seller}</p>
+                            <button id="wishlist"> 
+                                <i class="fa fa-heart-o"  aria-hidden="true" style="font-size:24px;" ></i>
+                                   </button>
+                           
+                         </div>    
+                    <p  id="price">₹${element.price}/-</p>
+                    <p id="name">${element.name}</p>
+                    <div id="trial">
+                        <div>
+                           <button id="tryhome" ><i class="fa fa-home" aria-hidden="true"></i> Book Try at Home</button> 
+                        </div>
+                    <div>
+                       <button id="livevedio"><i class="fa fa-video-camera" aria-hidden="true"></i>live vedio call</button> 
+                    </div>
+                    </div>
+                    <div id=cart>
+                    
+                    <button id="addtocart"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add to Cart</button>
+            </div>
+        </div>`
+        })
+
+        document.querySelector(".fetchdata").innerHTML = display.join(" ")
+    }
+
+    let createForm = document.getElementById("create")
+    createForm.addEventListener("submit", async (e) => {
+        e.preventDefault()
+        let allInputTags = document.querySelectorAll("input")
+        try {
+            let userObj = {}
+            for (let i = 0; i < allInputTags.length; i++) {
+                userObj[allInputTags[i].id] = allInputTags[i].value
+            }
+            let res = await fetch("http://localhost:8080/adminproducts/create", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    // Authorization: localStorage.getItem("token"),
+                },
+                body: JSON.stringify(userObj)
+            })
+            if(res.ok){
+            alert("notes created")
+            }else{
+                alert("something went wrong")
+            }
+        } catch (error) {
+            console.log(error.message)
+        }
+    })
+
+
+
+
+</script>
