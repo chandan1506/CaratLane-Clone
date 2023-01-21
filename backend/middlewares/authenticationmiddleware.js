@@ -15,11 +15,11 @@ const authentication=(req,res,next)=>
             next()
         }
         else{
-            res.send("please login first")
+            res.json("please login first")
         }
     }
     else{
-        res.send("please login")
+        res.json("please login")
     }
 }
 

@@ -5,6 +5,7 @@ require('dotenv').config()
 const bcrypt = require("bcrypt");
 var jwt = require('jsonwebtoken');
 
+
 adminRouter.post("/signup", async (req, res) => {
     const { name, contact, password, email } = req.body;
   
@@ -53,16 +54,16 @@ adminRouter.post("/login", async (req, res) => {
             
             const adminToken=jwt.sign({user:"ck"}, process.env.key)
             //console.log(adminToken)
-            res.send({ "message": "login sucessfull","token":adminToken });
+            res.json({ "message": "login sucessfull","adminToken":adminToken });
           } else {
-            res.send({"message":"wrong Credentials"});
+            res.json({"message":"wrong Credentials"});
           }
         });
       } else {
-        res.send({"message":"cannot login"});
+        res.json({"message":"cannot login"});
       }
     } catch (error) {
-      res.send(error);
+      res.json(error);
     }
   });
 

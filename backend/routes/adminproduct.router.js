@@ -1,7 +1,7 @@
 const express=require("express")
 const { Createproductmodel } = require("../models/product.model")
 const adminproduct=express.Router()
-const {admin_authentication} = require("../middlewares/admin.authentication.middleware")
+//const {admin_authentication} = require("../middlewares/admin.authentication.middleware")
 
 
 adminproduct.get("/products",async(req,res)=>
@@ -17,7 +17,7 @@ adminproduct.get("/products",async(req,res)=>
 
 //  adminproduct.use(admin_authentication)
 
-adminproduct.post("/create",async(req,res)=>
+adminproduct.post("/create" ,async(req,res)=>
 {
     payload=req.body
     // console.log(payload)
