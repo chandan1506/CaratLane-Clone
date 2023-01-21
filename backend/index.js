@@ -13,7 +13,7 @@ const{adminproduct}=require("./routes/adminproduct.router")
 const {adminRouter} = require("./routes/admin.router")
 
 //------------middleware-----//
-const{authentication}=require("./middlewares/authenticationmiddleware")
+ const{authentication}=require("./middlewares/authenticationmiddleware")
 
 //-----------cors-----------//
 const cors = require('cors')
@@ -29,9 +29,10 @@ app.get("/",(req,res)=>
 
 app.use("/admin",adminRouter)
 app.use("/adminproducts",adminproduct)
-
+ 
 app.use("/users",userrouter)
-app.use(authentication)
+ app.use(authentication)
+
 
 
 

@@ -8,6 +8,7 @@
     <title>Admin page</title>
     <link rel="stylesheet" href="../css/delete.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
@@ -105,7 +106,7 @@
                       
                             <p id="seller">${element.seller}</p>
                             <button id="wishlist"> 
-                                <i class="fa fa-heart-o"  aria-hidden="true" style="font-size:24px;" ></i>
+                                <i class="fa-regular fa-heart"></i>
                                    </button>
                            
                          </div>    
@@ -134,7 +135,6 @@
         e.preventDefault()
         let id = document.getElementById("pro").value
         // console.log(id)
-        alert(id)
         let res1 = await fetch(`http://localhost:8080/adminproducts/delete/${id}`, {
           method: "DELETE",
         //   headers: { Authorization: localStorage.getItem("token") },
@@ -142,7 +142,7 @@
           .then((res1) => res1.json())
           .then((res1) => {
             alert("DELETED");
-            product()
+            products()
             // console.log(res1);
           })
           .catch((err) => {
