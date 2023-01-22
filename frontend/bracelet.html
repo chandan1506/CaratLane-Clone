@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ff29a3d799.js" crossorigin="anonymous"></script>
+    <!-- <link rel="icon" type="image/x-icon" href="/images /favicon.ico"> -->
+    <title>Jewels: A Tanishq Partnership</title>
+    <link rel="icon" href="https://www.linkpicture.com/q/jewels.com-2.png">
+   
+    <link rel="stylesheet" href="./styles/ringspage.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+
+      <!-- ..........navbar..... -->
+      <div class="navbar">
+        <div class="navbar-top">
+            <div class="navbar-top-img">
+                <a href="./index.html">
+                    <h1>Jewels</h1>
+                    <p>A Tanishq Partner</p>
+                </a>
+                <!-- <a href="./html/payment.html"></a> -->
+            </div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-house"></span>
+                    <span>Free Try at Home</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-store"></span>
+                    <span>Find Store</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-sharp fa-solid fa-bag-shopping"></span>
+                    <span>Plan of Purchase</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-coins"></span>
+                    <span>Buy Digital Gold</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-location-dot"></span>
+                    <span> Pincode</span>
+                </a></div>
+            <div id="search_div" class="search_div">
+                <input type="text" id="search_book" placeholder="Search">
+                <button id="search_btn" onclick="searchfunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <button id="search_btn"><span class="material-symbols-outlined">search</span></button> -->
+            </div>
+            <div class="navbar-top-content" id="menu"><a href="#"><i class="fa-solid fa-user"></i></a>
+            <div class="submenu">
+                <ul>
+                    <li> <h4><a href="./html/admin-login.html">Login as Admin</a></h4></li>
+                    <li><h4><a href="./html/register.html">Login as User</a></h4></li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="navbar-top-content"><a href="./wishlist.html"><i class="fa-solid fa-heart"></i></a></div>
+            <div class="navbar-top-content"><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
+        </div>
+        <div class="navbar-bottom">
+            <div><a href="./newarrival.html">NEW ARRIVALS</a></div>
+            <div><a href="./ringspage.html">RINGS</a></div>
+            <div><a href="./earing.html">EARRINGS</a></div>
+            <div><a href="./bracelet.html">BRACELETS & BANGLES</a></div>
+            <div><a href="./solitaires.html">SOLITAIRES</a></div>
+            <div><a href="./mangalsutra.html">MANGALSUTRA</a></div>
+            <div><a href="#">READY TO SHIP</a></div>
+            <div><a href="./kid.html">KIDS</a></div>
+            <div><a href="#">OTHER JEWELLERY</a></div>
+            <div><a href="#">GIFTING</a></div>
+        </div>
+    </div>
+
+
+    <div id="container">
+        <div id="containertopimg">
+            <img src="https://banner.caratlane.com/live-images/dab8c9bccb50479fbad968e7ea6ea450.webp" alt="earing">
+        </div>
+
+        <!-- top select div -->
+
+        <div id="topselectcontainer">
+            
+                <a  href=""><button class="selecat">All</button></a>
+                <a  href=""><button class="selecat">try at home</button></a>
+                <a   href=""><button class="selecat">designs in store</button></a>
+                <a   href=""><button class="selecat">Fast Delivery</button></a>
+              
+                <a href=""><button class="selecat">New In</button></a>
+           
+         
+           <!-- <div id="select"> -->
+            <select name="" id="sort" >
+                <option value="rec" id="rec">Recommendation</option>
+                <option value="asc" id="asc">Sort Low To High</option>
+                <option value="desc" id="desc">Sort High To Low</option>
+            </select>
+        <!-- </div> -->
+        </div>
+
+
+        <!-- rendering data -->
+
+        <div id="midcontainer">
+            <div id="filtercontainer">
+                    
+                        <p class="pcenter">Filter By</p>
+                   <div class="filter">
+                    <h4 class="price">Price</h4>
+                        
+
+                     <input type="radio" id="price1" name="price" value="20000">
+                     <label for="price1">₹5,000 - ₹20,000 (50)</label><br>
+                     <input type="radio" id="price2" name="price" value="40000">
+                     <label for="price2">₹20,000 - ₹40,000 (42)</label><br>  
+                     <input type="radio" id="price3" name="price" value="60000">
+                     <label for="price3">40,000 - ₹60,000 (30)</label><br>
+                     <input type="radio" id="price4" name="price" value="80000">
+                     <label for="price4">₹60,000 - ₹80,000 (20)</label><br>
+                     <input type="radio" id="price5" name="price" value="120000">
+                     <label for="price5">₹80,000 - ₹1,20,000 (10)</label><br>
+                     <input type="radio" id="price6" name="price" value="200000">
+                     <label for="price6">₹1,20,000 - ₹2,00,000 (6)</label><br>
+
+                     <input type="radio" id="price7" name="price" value="20">
+                     <label for="price7">Over ₹2,00,000</label><br>
+
+                     <input type="radio" id="price8" name="price" value="1">
+                     <label for="all">All</label><br>
+                   </div>
+
+
+                  
+
+                   <div class="filter">
+                    <h4 class="price">Product Type</h4>
+                        
+
+                     <input type="radio" id="type1" name="type" value="earing">
+                     <label for="type1">Earings (150)</label><br>
+
+                     <input type="radio" id="type2" name="type" value="ring">
+                     <label for="type2">Rings (200)</label><br>  
+
+                     <input type="radio" id="type3" name="type" value="bracelets & bangles">
+                     <label for="type3">Bracelets (300)</label><br>
+                     <input type="radio" id="type4" name="type" value="bracelets & bangles">
+<!-- "bracelets & bangles" -->
+                     <label for="type4">Bangles</label><br>
+                     <input type="radio" id="type5" name="type" value="mangalsutra">
+                     <label for="type5">Mangalsutra (250)</label><br>
+
+                     <input type="radio" id="type7" name="type" value="solitaries">
+                     <label for="type7">Solitaries (100)</label><br>
+
+                     <input type="radio" id="type6" name="type" value="newarrival">
+                     <label for="type6">New Arrival (50)</label><br>
+
+                     
+
+                     <input type="radio" id="type8" name="type" value="all">
+                     <label for="type8">All (800)</label><br>
+                        
+                   </div>
+
+
+
+
+                   <div class="filter">
+                    <h4 class="price">Weight Ranges</h4>
+                        
+
+                    <input type="radio" id="weight1" name="weight" value="2">
+                    <label for="weight1">0 - 2 g</label><br>
+                    <input type="radio" id="weight2" name="weight" value="5">
+                    <label for="weight2">2 - 5 g</label><br>
+                    <input type="radio" id="weight3" name="weight" value="10">
+                    <label for="weight3">5 - 10 g</label><br>
+                    <input type="radio" id="weight3" name="weight" value="20">
+                    <label for="weight3">10 - 20 g</label><br>
+                   </div>
+
+
+
+
+                   <div class="filter">
+                    <h4 class="price">Material</h4>
+                        
+
+                     <input type="radio" id="material1" name="material" value="platinum">
+                     <label for="material1">Platinum</label><br>
+                     <input type="radio" id="material2" name="material" value="gold">
+                     <label for="material2">Gold</label><br>
+                     <input type="radio" id="material3" name="material" value="diamond">
+                     <label for="material3">Diamond</label><br>
+                     <input type="radio" id="material4" name="material" value="gemstone">
+                     <label for="material4">Gemstone</label><br>   
+                     <input type="radio" id="material5" name="material" value="Solitaire">
+                     <label for="material5">Solitaire</label><br>
+                   </div>
+
+
+                   <div class="filter">
+                    <h4 class="price">Ring Size</h4>
+                        
+
+                    <input type="radio" id="size1" name="size" value="5">
+                    <label for="size1">5 (2)</label><br>
+                    <input type="radio" id="size2" name="size" value="6">
+                    <label for="size2">6</label><br>
+                    <input type="radio" id="size3" name="size" value="7">
+                    <label for="size3">7</label><br>
+                    <input type="radio" id="size4" name="size" value="8">
+                    <label for="size4">8</label><br>
+                    <input type="radio" id="size5" name="size" value="9">
+                    <label for="size5">9</label><br>
+                    <input type="radio" id="size6" name="size" value="10">
+                    <label for="size6">10</label><br>
+
+                   </div>
+
+            </div>
+
+
+
+            <div id="renderdata">
+
+            
+                
+            </div>
+
+
+        </div>
+
+       
+    </div>
+
+     <!-- -------------ending-part-- -->
+     <div class="head-para">
+        <h4>Popular Searches</h4>
+        <h4 class="second-head">Pendant</h4>
+        <a href="#">Gold Pendant/Diamond Pendant/Solitaire Pendant/Gemstone Pendant/22KT Pendants</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Nose Pin</h4>
+        <a href="#">Nose Ring/Gold Nose Pin/Diamond Nose Pin</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Chain</h4>
+        <a href="#">Gold Chain/22kt Chains/Platinum Chains</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Bangles</h4>
+        <a href="#">Gold Bangles/Diamond Bangles/Gemstone Bangles/22kt Bangles</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Bracelet</h4>
+        <a href="#">Gold Bracelet/Diamond Bracelet/Kids Bracelets/Solitaire Bracelets/Pearl Bracelet/22kt Bracelets</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Necklace</h4>
+        <a href="#">Gold Necklace/Diamond Necklace/Kids Necklace/Gemstone Necklace/Ruby Necklace</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Rings</h4>
+        <a href="#">Diamond Rings/Gold Rings/Platinum Rings/Solitaire Rings/Gemstone Rings/Ruby Ring/Mens Rings</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Earrings</h4>
+        <a href="#">Gold Earrings/Diamond Earrings/Gemstone Earrings/Solitaire Earrings/Platinum Earrings/22kt
+            Earrings</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">Jewellery</h4>
+        <a href="#">Gold/Diamond/Solitaire/Gemstone/22kt Jewellery/Platinum</a>
+        <hr>
+    </div>
+    <div class="head-para">
+        <h4 class="second-head">COPYRIGHT Jewels © 2022</h4>
+        <a href="#">SITE MAP/PRIVACY POLICYTERMS & CONDITIONSCORPORATE XCLUSIVEFREQUENTLY ASKED QUESTION</a>
+    </div>
+</body>
+</html>
+
+<script  type="module" src="./scripts/bracelet.js"></script>
+
+
+
+<!-- <i class="fa-sharp fa-solid fa-link iconchain"></i> -->

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/otp.css" />
+  </head>
+  <body>
+
+       <!-- ..........navbar..... -->
+       <div class="navbar">
+        <div class="navbar-top">
+            <div class="navbar-top-img">
+                <a href="./index.html">
+                    <h1>Jewels</h1>
+                    <p>A Tanishq Partner</p>
+                </a>
+                <!-- <a href="./html/payment.html"></a> -->
+            </div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-house"></span>
+                    <span>Free Try at Home</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-store"></span>
+                    <span>Find Store</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-sharp fa-solid fa-bag-shopping"></span>
+                    <span>Plan of Purchase</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-coins"></span>
+                    <span>Buy Digital Gold</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-location-dot"></span>
+                    <span> Pincode</span>
+                </a></div>
+            <div id="search_div" class="search_div">
+                <input type="text" id="search_book" placeholder="Search">
+                <button id="search_btn" onclick="searchfunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <button id="search_btn"><span class="material-symbols-outlined">search</span></button> -->
+            </div>
+            <div class="navbar-top-content" id="menu"><a href="#"><i class="fa-solid fa-user"></i></a>
+            <div class="submenu">
+                <ul>
+                    <li> <h4><a href="./html/admin-login.html">Login as Admin</a></h4></li>
+                    <li><h4><a href="./html/register.html">Login as User</a></h4></li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="navbar-top-content"><a href="./wishlist.html"><i class="fa-solid fa-heart"></i></a></div>
+            <div class="navbar-top-content"><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
+        </div>
+        <div class="navbar-bottom">
+            <div><a href="./newarrival.html">NEW ARRIVALS</a></div>
+            <div><a href="./ringspage.html">RINGS</a></div>
+            <div><a href="./earing.html">EARRINGS</a></div>
+            <div><a href="./bracelet.html">BRACELETS & BANGLES</a></div>
+            <div><a href="./solitaires.html">SOLITAIRES</a></div>
+            <div><a href="./mangalsutra.html">MANGALSUTRA</a></div>
+            <div><a href="#">READY TO SHIP</a></div>
+            <div><a href="./kid.html">KIDS</a></div>
+            <div><a href="#">OTHER JEWELLERY</a></div>
+            <div><a href="#">GIFTING</a></div>
+        </div>
+    </div>
+
+    <img src="/image/tribawala-removebg-preview.png" alt="" id="logo" />
+    <div class="container">
+      <h1>ENTER OTP</h1>
+      <div class="userinput">
+        <input
+          type="text"
+          maxlength="1"
+          id="ist"
+          onkeyup="clickEvent(this,'sec')"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          id="sec"
+          onkeyup="clickEvent(this, 'third')"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          id="third"
+          onkeyup="clickEvent(this, 'fourth')"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          id="fourth"
+          onkeyup="clickEvent(this, 'fifth')"
+        />
+        <input type="text" maxlength="1" id="fifth" />
+      </div>
+      <button id="btn" onclick="fun()">Confirm</button>
+    </div>
+    <!-- <a href="../index.html"></a> -->
+    <img
+      src="https://assets.materialup.com/uploads/9ba2d687-d7d3-4361-8aee-7b2a3c074761/preview.gif"
+      alt=""
+      id="paydone"
+    />
+    <!-- loading-screen -->
+    <div class="loading">
+      <div class="liquid"></div>
+      <div class="liquid"></div>
+      <div class="liquid"></div>
+      <div class="liquid"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+   alert("Your OTP : 12121")
+  
+
+  function fun() {
+    document.querySelector(".userinput").style.display = "none";
+    document.querySelector("h1").style.display = "none";
+    document.getElementById("btn").style.display = "none";
+    document.querySelector(".loading").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("paydone").style.display = "block";
+      document.querySelector(".loading").style.display = "none";
+    }, 2000);
+    setTimeout(() => {
+      alert("payment successful");
+      window.location.href = "../index.html";
+    }, 3000);
+  }
+</script>

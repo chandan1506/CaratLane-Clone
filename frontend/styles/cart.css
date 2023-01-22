@@ -1,0 +1,171 @@
+*{
+    margin:0;
+}
+
+#container{
+    width:100%;
+    display: grid;
+    grid-template-columns: 60% 35%;
+    gap:5%;
+    justify-content:space-evenly;
+    
+}
+
+
+#leftcard{
+
+height: 466px;
+
+}
+
+#rightcard{
+    height: 466px;
+    float: right;
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+    
+    }
+
+    #rightmini{
+        width: 60%;
+        margin: auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 20px;
+        padding:10px
+    }
+
+    .minorderdiv{
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+
+    #checoutbutton{
+        
+        width:50%;
+        margin:auto
+    }
+
+    #checkout{
+        padding: 10px 40px 10px 40px;
+        border:transparent;
+        background-color: green;
+        color:white;
+        border-radius: 7px;
+    }
+    
+    #renderdata{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 25px;
+        margin:auto
+    }
+    #card{
+        /* border:1px solid; */
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    
+    #image{
+        width: 100%;
+        /* border: 1px solid; */
+    }
+    #trial{
+        display: flex;
+        justify-content:space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #price{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #cardtop{
+        display: flex;
+        justify-content:space-between
+    }
+    
+    #wishlist{
+        background-color: transparent;
+        border: 0;
+    }
+    #wishlist:hover{
+        cursor: pointer;
+    }
+    
+    #addtowishlist{
+      float: right;
+    }
+    
+    #tryhome{
+        background-color: transparent;
+        padding: 5px;
+        border-radius: 4px;
+        border-color: green;
+        color:green
+    }
+    
+    #livevedio{
+        background-color: transparent;
+        padding: 5px;
+        border-radius: 4px;
+        border-color: gold;
+        color:gold
+    }
+    
+    #addtowishlist{
+        background-color: transparent;
+        padding: 10px;
+        border: 0;
+        border-radius: 3px;
+        background-color: green;
+        color: white;
+        font-size: 15px;
+        
+    }
+    #addtowishlist:hover{
+        cursor: pointer;
+        background-color: black;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+
+    #remove{
+        background-color: transparent;
+        padding: 10px;
+        border: 0;
+        border-radius: 3px;
+        background-color: gold;
+        color: white;
+        font-size: 15px;
+    }
+
+    #remove:hover{
+        cursor: pointer;
+        background-color: black;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    /* width */
+::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: gold; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: green; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
