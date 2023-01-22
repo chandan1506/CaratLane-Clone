@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
-    <link rel="stylesheet" href="../css/register-login.css">
+    <link rel="stylesheet" href="../styles/register-login.css">
 </head>
 <body>
     <h1>Admin Login Form</h1>
@@ -29,7 +29,7 @@
             for (let i = 0; i < allInputTags.length; i++) {
                 userObj[allInputTags[i].id] = allInputTags[i].value
             }
-            let login_request = await fetch("http://localhost:8080/admin/login", {
+            let login_request = await fetch("https://angry-turtleneck-lamb.cyclic.app/admin/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

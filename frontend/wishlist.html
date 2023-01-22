@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewels: A Tanishq Partnership</title>
+    <link rel="icon" href="https://www.linkpicture.com/q/jewels.com-2.png">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/wishlist.css">
+</head>
+<body>
+
+     <!-- ..........navbar..... -->
+     <div class="navbar">
+        <div class="navbar-top">
+            <div class="navbar-top-img">
+                <a href="./index.html">
+                    <h1>Jewels</h1>
+                    <p>A Tanishq Partner</p>
+                </a>
+                <!-- <a href="./html/payment.html"></a> -->
+            </div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-house"></span>
+                    <span>Free Try at Home</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-store"></span>
+                    <span>Find Store</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-sharp fa-solid fa-bag-shopping"></span>
+                    <span>Plan of Purchase</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-coins"></span>
+                    <span>Buy Digital Gold</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-location-dot"></span>
+                    <span> Pincode</span>
+                </a></div>
+            <div id="search_div" class="search_div">
+                <input type="text" id="search_book" placeholder="Search">
+                <button id="search_btn" onclick="searchfunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <button id="search_btn"><span class="material-symbols-outlined">search</span></button> -->
+            </div>
+            <div class="navbar-top-content" id="menu"><a href="#"><i class="fa-solid fa-user"></i></a>
+            <div class="submenu">
+                <ul>
+                    <li> <h4><a href="./html/admin-login.html">Login as Admin</a></h4></li>
+                    <li><h4><a href="./html/register.html">Login as User</a></h4></li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="navbar-top-content"><a href="./wishlist.html"><i class="fa-solid fa-heart"></i></a></div>
+            <div class="navbar-top-content"><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
+        </div>
+        <div class="navbar-bottom">
+            <div><a href="./newarrival.html">NEW ARRIVALS</a></div>
+            <div><a href="./ringspage.html">RINGS</a></div>
+            <div><a href="./earing.html">EARRINGS</a></div>
+            <div><a href="./bracelet.html">BRACELETS & BANGLES</a></div>
+            <div><a href="./solitaires.html">SOLITAIRES</a></div>
+            <div><a href="./mangalsutra.html">MANGALSUTRA</a></div>
+            <div><a href="#">READY TO SHIP</a></div>
+            <div><a href="./kid.html">KIDS</a></div>
+            <div><a href="#">OTHER JEWELLERY</a></div>
+            <div><a href="#">GIFTING</a></div>
+        </div>
+    </div>
+
+
+    <h4 id="totalproduct"> Total Product in Wishlist:</h4>
+    <div id="renderdata">
+
+    </div>
+</body>
+</html>
+
+<script src="./scripts/wishlist.js"></script>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
-    <link rel="stylesheet" href="../css/register-login.css">
+    <link rel="stylesheet" href="../styles/register-login.css">
 </head>
 <body>
     <h1>Login Form</h1>
@@ -17,21 +17,19 @@
         </form>
         
     </div>
-   
 </body>
 </html>
 <script>
     let loginForm = document.querySelector("form")
     loginForm.addEventListener("submit", async (e) => {
         e.preventDefault()
-        console.log("hii")
         let allInputTags = document.querySelectorAll("input")
         try {
             let userObj = {}
             for (let i = 0; i < allInputTags.length; i++) {
                 userObj[allInputTags[i].id] = allInputTags[i].value
             }
-            let login_request = await fetch("http://localhost:8080/users/login", {
+            let login_request = await fetch("https://angry-turtleneck-lamb.cyclic.app/users/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -39,7 +37,8 @@
                 body: JSON.stringify(userObj)
             }).then((res) => res.json()).then((res) => localStorage.setItem("token", res.token))
             alert("login successfull")
-            window.location.href = "index.html"
+            window.location.href = "../index.html"
+            
         } catch (error) {
             console.log(error.message)
         }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin page</title>
-    <link rel="stylesheet" href="../css/delete.css">
+    <link rel="stylesheet" href="../styles/delete.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="log-out"><i class="bx bx-log-out"></i>
-                    <a href="./index.html">Logout</a>
+                    <a href="../index.html">Logout</a>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
      let bag = [];
     async function products() {
         try {
-            let res = await fetch(`http://localhost:8080/adminproducts/products`)
+            let res = await fetch(`https://angry-turtleneck-lamb.cyclic.app/adminproducts/products`)
             let data = await res.json()
             // console.log(data)
             bag = data
@@ -135,7 +135,7 @@
         e.preventDefault()
         let id = document.getElementById("pro").value
         // console.log(id)
-        let res1 = await fetch(`http://localhost:8080/adminproducts/delete/${id}`, {
+        let res1 = await fetch(`https://angry-turtleneck-lamb.cyclic.app/adminproducts/delete/${id}`, {
           method: "DELETE",
         //   headers: { Authorization: localStorage.getItem("token") },
         })

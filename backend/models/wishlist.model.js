@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
 
-const createproductSchema=mongoose.Schema({
+const createwishlistSchema=mongoose.Schema({
+   
     image:String,
     name:String,
     type:String,
@@ -11,13 +12,14 @@ const createproductSchema=mongoose.Schema({
     arrival:String,
     image1:String,
     Book:String,
-    livecall:String
+    livecall:String,
+    userID:String
 })
 
 
-const Createproductmodel=mongoose.model("products",createproductSchema)
+const Createwishlistmodel=mongoose.model("wishlist",createwishlistSchema)
 
 
 module.exports={
-    Createproductmodel
+    Createwishlistmodel
 }

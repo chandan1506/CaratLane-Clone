@@ -411,6 +411,7 @@ padding: 40px 40px;
     color: blue;
 }
 
+/* ----------drop-down-------- */
 
 .submenu ul{
     list-style: none;
@@ -446,3 +447,24 @@ display:block;
     display: block;
     background-color:green;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: gold; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: green; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+

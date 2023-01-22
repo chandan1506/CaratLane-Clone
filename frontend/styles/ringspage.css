@@ -1,0 +1,194 @@
+*{
+    margin:0
+}
+
+#container{
+    width: 100%;
+}
+#containertopimg>img{
+    width:100%
+}
+
+
+
+#topselectcontainer{
+    
+    margin-top: -4px;
+    height: auto;
+    background-color:gray;
+}
+
+.selecat{
+    padding: 10px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px
+    
+}
+
+.selecat:hover{
+    cursor: pointer;
+    background-color: green;
+    color:white
+}
+
+
+#sort{
+    margin-top :auto;
+    float: right;
+    background-color: green;
+    padding: 10px;
+    cursor: pointer;
+    color:white
+}
+
+
+
+#midcontainer{
+    width:100%;
+    height:auto;
+    display: flex;
+    justify-content:space-evenly;
+  
+    margin-top: 30px;
+}
+
+
+#filtercontainer{
+    width:30%;
+    height:500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    float: left;
+   
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+    
+   
+    
+}
+
+
+.pcenter{
+   
+    padding:30px;
+    background-color: gray;
+    margin:auto;
+   
+    text-align: center;
+    align-items: center;
+}
+
+
+.filter{
+   
+    width:70%;
+    margin:auto;
+    margin-top: 10px;
+}
+
+.filter>input{
+   margin: 10px;
+}
+.price{
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: gold; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: green; 
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: black 
+  }
+
+#renderdata{
+    width: 60%;
+    height:100%;
+    
+}
+
+
+#renderdata{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin:auto
+}
+
+#card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#image{
+    width: 100%;
+}
+#trial{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#price{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#cardtop{
+    display: flex;
+    justify-content:space-between
+}
+#cardtop i{
+    color:green
+}
+#wishlist{
+    background-color: transparent;
+    border: 0;
+}
+#wishlist:hover{
+    cursor: pointer;
+}
+
+#addtocart{
+  float: right;
+}
+
+#tryhome{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
+    border-color: green;
+    color:green
+}
+
+#livevedio{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
+    border-color: gold;
+    color:gold
+}
+
+#addtocart{
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    
+}
+#addtocart:hover{
+    cursor: pointer;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

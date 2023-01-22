@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up page</title>
-    <link rel="stylesheet" href="../css/register-login.css">   
+    <link rel="stylesheet" href="../styles/register-login.css">   
 </head>
 <body>
     <h1>Sign up form</h1>
@@ -16,7 +16,7 @@
             <input required type="number" id="contact" placeholder="Enter your contact">
             <input required  type="password" id="password" placeholder="Enter your password">
             <input type="submit"  id="submit-btn">  
-             <a class="user-anchor" href="../html/login.html">Already an User</a>
+             <a class="user-anchor" href="./login.html">Already an User</a>
         </form>
     </div>
 </body>
@@ -31,7 +31,7 @@ for(let i=0;i<allInputTags.length;i++){
     userObj[allInputTags[i].id] = allInputTags[i].value
 }
 try{
-        let register_request = await fetch("http://localhost:8080/users/signup",{
+        let register_request = await fetch("https://angry-turtleneck-lamb.cyclic.app/users/signup",{
             method:"POST",
             headers:{
                "Content-Type": "application/json"
@@ -40,9 +40,9 @@ try{
         })
         if(register_request.ok){
         alert("registered")
-        window.location.href = "login.html"
+        window.location.href ="./login.html"
         }else{
-            alert("bad frequest")
+            alert("bad request")
         }
 } catch (error) {
         console.log(error)

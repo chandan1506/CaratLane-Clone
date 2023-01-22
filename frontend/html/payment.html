@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="../styles/payment.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/index.css">
+  </head>
+  <body>
+
+
+       <!-- ..........navbar..... -->
+       <div class="navbar">
+        <div class="navbar-top">
+            <div class="navbar-top-img">
+                <a href="./index.html">
+                    <h1>Jewels</h1>
+                    <p>A Tanishq Partner</p>
+                </a>
+                <!-- <a href="./html/payment.html"></a> -->
+            </div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-house"></span>
+                    <span>Free Try at Home</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-store"></span>
+                    <span>Find Store</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-sharp fa-solid fa-bag-shopping"></span>
+                    <span>Plan of Purchase</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-coins"></span>
+                    <span>Buy Digital Gold</span>
+                </a></div>
+            <div class="navbar-top-content"><a href="#">
+                    <span class="fa-solid fa-location-dot"></span>
+                    <span> Pincode</span>
+                </a></div>
+            <div id="search_div" class="search_div">
+                <input type="text" id="search_book" placeholder="Search">
+                <button id="search_btn" onclick="searchfunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <button id="search_btn"><span class="material-symbols-outlined">search</span></button> -->
+            </div>
+            <div class="navbar-top-content" id="menu"><a href="#"><i class="fa-solid fa-user"></i></a>
+            <div class="submenu">
+                <ul>
+                    <li> <h4><a href="./html/admin-login.html">Login as Admin</a></h4></li>
+                    <li><h4><a href="./html/register.html">Login as User</a></h4></li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="navbar-top-content"><a href="./wishlist.html"><i class="fa-solid fa-heart"></i></a></div>
+            <div class="navbar-top-content"><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
+        </div>
+        <div class="navbar-bottom">
+            <div><a href="./newarrival.html">NEW ARRIVALS</a></div>
+            <div><a href="./ringspage.html">RINGS</a></div>
+            <div><a href="./earing.html">EARRINGS</a></div>
+            <div><a href="./bracelet.html">BRACELETS & BANGLES</a></div>
+            <div><a href="./solitaires.html">SOLITAIRES</a></div>
+            <div><a href="./mangalsutra.html">MANGALSUTRA</a></div>
+            <div><a href="#">READY TO SHIP</a></div>
+            <div><a href="./kid.html">KIDS</a></div>
+            <div><a href="#">OTHER JEWELLERY</a></div>
+            <div><a href="#">GIFTING</a></div>
+        </div>
+    </div>
+
+
+    <div class="mainscreen">
+      <!-- <img src="https://image.freepik.com/free-vector/purple-background-with-neon-frame_52683-34124.jpg"  class="bgimg " alt="">-->
+      <div class="card">
+        <div class="leftside">
+          <img
+            src="/image/tribawala-removebg-preview.png"
+            class="product"
+            alt="Shoes"
+          />
+        </div>
+        <div class="rightside">
+          <form action="">
+            <h1>CheckOut</h1>
+            <h2>Payment Information</h2>
+            <p>Cardholder Name</p>
+            <input type="text" class="inputbox" name="name" required />
+            <p>Card Number</p>
+            <input
+              type="number"
+              class="inputbox"
+              name="card_number"
+              id="card_number"
+              required
+            />
+
+            <p>Card Type</p>
+            <select class="inputbox" name="card_type" id="card_type" required>
+              <option value="">--Select a Card Type--</option>
+              <option value="Visa">Visa</option>
+              <option value="RuPay">RuPay</option>
+              <option value="MasterCard">MasterCard</option>
+            </select>
+            <div class="expcvv">
+              <p class="expcvv_text">Expiry</p>
+              <input
+                type="date"
+                class="inputbox"
+                name="exp_date"
+                id="exp_date"
+                required
+              />
+
+              <p class="expcvv_text2">CVV</p>
+              <input
+                type="password"
+                class="inputbox"
+                name="cvv"
+                id="cvv"
+                required
+              />
+            </div>
+            <p></p>
+            <button type="submit" class="button" onclick="otppage()">
+              CheckOut
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function otppage() {
+      window.location.href = "otp.html";
+    }
+  </script>
+</html>
