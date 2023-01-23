@@ -12,7 +12,6 @@
 
 
 #topselectcontainer{
-    
     margin-top: -4px;
     height: auto;
     background-color:gray;
@@ -49,7 +48,7 @@
     height:auto;
     display: flex;
     justify-content:space-evenly;
-  
+    position: sticky;
     margin-top: 30px;
 }
 
@@ -60,10 +59,10 @@
     overflow: scroll;
     overflow-x: hidden;
     float: left;
-   
+
     position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+    position: sticky;
+    top: 0;
     
    
     
@@ -120,11 +119,14 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 15px;
-    margin:auto
+    margin:auto;
+    overflow-y: scroll;
+    height: 500px;
 }
 
 #card{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 20px;
 }
 
 #image{
