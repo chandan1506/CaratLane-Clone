@@ -155,8 +155,12 @@
 }
 #wishlist:hover{
     cursor: pointer;
+    background-color:green;
+    border-radius: 5px;
 }
-
+#cardtop i:hover{
+    color:white
+}
 #addtocart{
   float: right;
 }
