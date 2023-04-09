@@ -1,10 +1,10 @@
 
-<h1 align="center">DevQuery - Stack Overflow Clone</h1>
-<p align="center"><img  src="https://www.linkpicture.com/q/DevQuery.logo_1.png"></p>
- <h2> A question-answer website that unites programmers all over the globe.</h2>
+<h1 align="center">Jewels - CaratLane Clone</h1>
+<p align="center"><img width="150px" src="https://www.linkpicture.com/q/jewels.com_3.png"></p>
+ <h2> An Ecommerce platform that deals with jewellery.</h2>
 <br>
 
-This is a Stack Overflow clone project where at ask page you can post your questions, at questions page you can see the list of questions and answer the questions with the restriction of not answering your own question and at users page admin can see the list of users listed in the website.
+This is a CaratLane clone project where you can visit different pages like new arrival,ring, mangalsutra, brochure, solitaire page etc. and you can add into cart or wishlist and place an order with an otp verification.there is an admin page where admin can see list of the products, and can do all CRUD operations there.
 
 
 
@@ -29,22 +29,20 @@ This is a Stack Overflow clone project where at ask page you can post your quest
 <br/>
 <br/>
 
-![App homepage](https://www.linkpicture.com/q/stack.png)
+![App homepage](https://www.linkpicture.com/q/Screenshot-84_5.png)
 
 ## Features
 
 
 - Landing page
 - Signup and Login pages
-- Ask page
-- Questions page
-- Users page
-- User authentication with Google OAuth and GitHub OAuth
-- Users can post questions
-- Users can't answer his own question
-- Users can comment on other questions
-- Like functionality for posts
-- Users can search for a particular question from any page
+- Decent carousel
+- different Products page
+- Cart page
+- Wishlist page
+- Payment page
+- Admin page
+- Admin can do all CRUD operations
 
 
 
@@ -53,7 +51,7 @@ This is a Stack Overflow clone project where at ask page you can post your quest
 ### Clone the project
 
 ```bash
- https://github.com/RAJKUMARSHRIVASH/native-minister-9066.git
+https://github.com/chandan1506/CaratLane-Clone.git
 ```
 
 ### Install dependencies
@@ -81,26 +79,21 @@ This is a Stack Overflow clone project where at ask page you can post your quest
 
 ## Project Highlights
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-72.png" />
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-85_3.png" />
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-77_5.png" />
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-86_1.png" />
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-76_2.png" />
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-87_2.png" />
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-78_1.png" />
 
 ## Demo
 
-https://rococo-rolypoly-a926ac.netlify.app/
+https://graceful-trifle-0e69fe.netlify.app/
 
 
- ## Authors
+ ## Author
 
-- [@RAJKUMARSHRIVASH](https://github.com/RAJKUMARSHRIVASH)
 - [@chandan1506](https://github.com/chandan1506)
-- [@Dhaanu I](https://github.com/DhaanuI)
-- [@Chetandabli](https://github.com/chetandabli)
-- [@DheerajPal](https://github.com/Dheeraj-pal)
 
 
 ## Show your support 🙌
