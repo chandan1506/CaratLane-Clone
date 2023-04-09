@@ -1,7 +1,7 @@
 
 <h1 align="center">Jewels - CaratLane Clone</h1>
 <p align="center"><img width="150px" src="https://www.linkpicture.com/q/jewels.com_3.png"></p>
- <h2> An Ecommerce platform that deals with jewellery.</h2>
+ <h2> An E-Commerce platform that deals with jewellery.</h2>
 <br>
 
 This is a CaratLane clone project where you can visit different pages like new arrival,ring, mangalsutra, brochure, solitaire page etc. and you can add into cart or wishlist and place an order with an otp verification.there is an admin page where admin can see list of the products, and can do all CRUD operations there.
@@ -79,16 +79,22 @@ https://github.com/chandan1506/CaratLane-Clone.git
 
 ## Project Highlights
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-85_3.png" />
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-101_3.png" />
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-86_1.png" />
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-95_8.png" />
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-87_2.png" />
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-89_1.png" />
+
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-92_6.png" />
+
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-98_3.png" />
+
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-99_5.png" />
 
 
 ## Demo
 
-https://graceful-trifle-0e69fe.netlify.app/
+https://jewelss.netlify.app
 
 
  ## Author
