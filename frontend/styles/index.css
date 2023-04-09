@@ -450,17 +450,17 @@ display:block;
 
 /* width */
 ::-webkit-scrollbar {
-    width: 18px;
+    width: 10px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: gold; 
+    background: rgba(58, 56, 56, 0.384); 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: green; 
+    background: gray; 
   }
   
   /* Handle on hover */
