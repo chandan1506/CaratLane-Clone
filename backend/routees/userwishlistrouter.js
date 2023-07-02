@@ -26,11 +26,15 @@ userwishlistrouter.post("/createwihslist", async(req,res)=>
     console.log(payload)
     // res.send("creating wishlist")
     try {
+        let cart=await Createwishlistmodel.findOne(payload)
+        if(cart){
+         return  res.send({message:"This product is already in Wishlist"})
+        }
         let newcart=new Createwishlistmodel(payload)
         await newcart.save()
         res.send({message:"Added to Wishlist"})
     } catch (error) {
-        res.send({message:"This product is already in Wishlist"})
+        res.send({message:"something went wrong"})
     }
     
  })
@@ -46,7 +50,7 @@ userwishlistrouter.post("/createwihslist", async(req,res)=>
     try {
       if(userID_jwt===wishlist_userID){
           await Createwishlistmodel.findByIdAndDelete({ _id: ID });
-          res.send( {message: `deleted wishlist item of id ${ID}`});
+          res.send( {message: "wishlist Item is Deleted"});
       }
 
       else{
@@ -57,40 +61,6 @@ userwishlistrouter.post("/createwihslist", async(req,res)=>
       res.send({message:"cannot delete the wishlist item"});
     }
   });
-
-// 63c8e295ab4bfc00332a5754
-// userCartrouter.post("/createcart",async(req,res)=>
-// {
-//     const id=req.query.id
-
-//     console.log(id)
-//     let product=await Createproductmodel.find({_id:id})
-//     console.log(product)
-//   const  obj=product[0]
-// obj.userID=req.body.userID
-// console.log(obj)
-//  const cartitem=await Createcartmodel.find({_id:id})
- 
-//  if(cartitem.length>0)
-//  {
-//     res.send("already in cart")
-//  }
-//  else{
-//     try {
-//         console.log("trycatch")
-//         console.log(req.body.userID)
-//         let newcart=await Createcartmodel.insertMany(req.body)
-//         res.send(newcart)
-
-//     } catch (error) {
-//         console.log(error)
-//         res.send("cannot create new cart item")
-//     }
-//  }
-       
-// })
-
-
 
 module.exports={
     userwishlistrouter

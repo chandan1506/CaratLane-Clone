@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up page</title>
-    <link rel="stylesheet" href="../styles/register-login.css">   
+    <link rel="stylesheet" href="../styles/register-login.css">  
+     <!-- sweet alert -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
 </head>
 <body>
     <h1>Sign up form</h1>
@@ -38,11 +40,13 @@ try{
             },
             body:JSON.stringify(userObj)
         })
-        if(register_request.ok){
-        alert("registered")
+        const res = await register_request.json() 
+        if(res.message == "User Registered"){
+            await swal(`${res.message}`,"success")
         window.location.href ="./login.html"
         }else{
-            alert("bad request")
+        
+            await swal(`${res.message}`,"","error")
         }
 } catch (error) {
         console.log(error)

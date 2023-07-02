@@ -190,69 +190,6 @@ userrender.get("/sorting",async(req,res)=>
     
 })
 
-
-
-
-
-
-
-
-// find({$and:[{price:{$gt:0}},{price:{$lt:100000}}]}) correct one
-
-// {$and:[{price:{$gt:0}},{price:{$lt:100000}}]}
-
-// {$and:[{$and:[{price:{$gt:0}},{price:{$lt:100000}}]},{type:"earing"}]}
-// Want the data whose health is in between 40 and 60 ⇒ db.heroes.find({$and:
-// [{health:{$gt:40}}, {health:{$lt:60}}]}).pretty()
-
-
-// adminproduct.post("/create",async(req,res)=>
-// {
-//     payload=req.body
-//     // console.log(payload)
-
-//     try {
-//         const newproduct=new Createproductmodel(payload)
-//         await newproduct.save()
-        
-//         res.send(' new products added')
-//     } catch (error) {
-//         res.send("Cannot Create new Product")
-//     }
-
-   
-// })
-
-
-// adminproduct.patch("/update/:id", async(req,res)=>{
-//     const ID=req.params.id
-//     const payload=req.body
-//     // console.log(ID)
-
-//     try {
-//         await Createproductmodel.findByIdAndUpdate({_id:ID},payload)
-//         res.send({"message":`updated the data of ID:==>> ${ID}`})
-//     } catch (error) {
-//         res.send({"message":"cannot update the product"})
-//     }
-  
-// })
-
-
-// adminproduct.delete("/delete/:id", async(req,res)=>
-// {
-//     const ID=req.params.id
-//     console.log(ID)
-
-//     try {
-//         await Createproductmodel.findByIdAndDelete({_id:ID})
-//         res.send({"message":`deleted the item id ${ID}`})
-//     } catch (error) {
-//         res.send( {"message":"cannot delete "})
-//     }
-    
-// })
-
 module.exports={
     userrender
 }
