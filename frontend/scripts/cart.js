@@ -146,8 +146,9 @@ async function wishlistcard_data(id) {
         const ans=await res.json()
         console.log("cart user ID")
         console.log(ans)
-        Cart()
+        // Cart()
         alert(ans.message)
+        window.location.href="./cart.html"
        
         
         // alert("note removed")
@@ -162,3 +163,5 @@ async function wishlistcard_data(id) {
   {
     window.location.href="./html/payment.html"
   }
+
+  

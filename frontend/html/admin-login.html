@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <link rel="stylesheet" href="../styles/register-login.css">
+     <!-- sweet alert -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <h1>Admin Login Form</h1>
@@ -35,9 +37,24 @@
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(userObj)
-            }).then((res) => res.json()).then((res) => localStorage.setItem("adminToken", res.adminToken))
-            alert("login successfull")
+            })
+            const res = await login_request.json()
+            console.log(res) 
+            if(res.message == "login sucessfull"){
+                await  swal(
+                    "Login Successfull",
+                    "success"
+                  );
+                localStorage.setItem("adminToken", res.adminToken)
             window.location.href = "admin.html"
+            }else{
+                await swal("plz Login Again","","error");
+            }
+            
+            
+            // .then((res) => res.json()).then((res) => localStorage.setItem("adminToken", res.adminToken))
+            // alert("login successfull")
+            // window.location.href = "admin.html"
         } catch (error) {
             console.log(error.message)
         }
