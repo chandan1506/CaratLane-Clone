@@ -43,7 +43,7 @@ function searchfunction(){
      }else if(input == "KIDS"){
         window.location.href='./kid.html'
      }else{
-        alert("Write Correct Page Name Such As :- RINGS, KIDS etc")
+        alert(" Write Correct Page Name Such As :- RINGS, KIDS etc ")
      }
    
 }
