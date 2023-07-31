@@ -26,9 +26,26 @@
             
     //search function//
 
-function searchfunction()
-{
-    window.location.href='./ringspage.html'
+function searchfunction(){
+     let input = document.getElementById("search_book").value
+     if(input == "NEW ARRIVALS"){
+        window.location.href='./newarrival.html'
+     }else if(input == "RINGS"){
+        window.location.href='./ringspage.html'
+     }else if(input == "EARRINGS"){
+        window.location.href='./earing.html'
+     }else if(input == "BRACELETS & BANGLES"){
+        window.location.href='./bracelet.html'
+     }else if(input == "SOLITAIRES"){
+        window.location.href='./solitaires.html'
+     }else if(input == "MANGALSUTRA"){
+        window.location.href='./mangalsutra.html'
+     }else if(input == "KIDS"){
+        window.location.href='./kid.html'
+     }else{
+        alert("Write Correct Page Name Such As :- RINGS, KIDS etc")
+     }
+   
 }
 
      
