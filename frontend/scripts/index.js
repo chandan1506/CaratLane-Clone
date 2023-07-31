@@ -20,9 +20,12 @@ setTimeout("changeImage()",3000)
 }
 changeImage()   
 
-                    //search function//
-
-function searchfunction()
-{
-    window.location.href='./ringspage.html'
-}
+                
+     // Hide the preloader and show the body content after 5 seconds
+ setTimeout(function() {
+    var preloader = document.getElementById('preloader');
+    var body = document.querySelector('body');
+    preloader.style.display = 'none';
+    body.style.display = 'block';
+  }, 5000); 
+  

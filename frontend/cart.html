@@ -9,7 +9,6 @@
     <link rel="icon" href="https://www.linkpicture.com/q/jewels.com-2.png">
     <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <script src="./scripts/index.js"></script>
 </head>
 <body>
     
@@ -59,6 +58,7 @@
 
         <div class="navbar-top-content"><a href="./wishlist.html"><i class="fa-solid fa-heart"></i></a></div>
         <div class="navbar-top-content"><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
+        <div class="navbar-top-content"><button id="logout">Logout</button></div>
     </div>
     <div class="navbar-bottom">
         <div><a href="./newarrival.html">NEW ARRIVALS</a></div>
@@ -77,7 +77,9 @@
 
 <div id="container">
     <div id="renderdata">
-
+        <div id="loader">
+            <img src="https://shorturl.at/aoA12">
+          </div>
     </div>
     <div id="rightcard">
         <h3 id="totalproduct">Total Product:</h3>
@@ -87,12 +89,12 @@
         <div id="rightmini">
             <div class="minorderdiv">
                 <div><p>Subtotal</p></div>
-                <div><p id="subtotal">₹122574</p></div>
+                <div><p id="subtotal">₹0</p></div>
             </div>
             <br><br>
             <div class="minorderdiv">
                 <div><p>You save</p></div>
-                <div><p id="save">-₹9874</p></div>
+                <div><p id="save">₹0</p></div>
             </div>
             <br><br>
     
@@ -102,13 +104,13 @@
             </div>
             <br><br>
             <div class="minorderdiv">
-                <div><p>Delivery Charger</p></div>
+                <div><p>Delivery Charge</p></div>
                 <div><p id="delivery">Free</p></div>
             </div>
             <br><br>
             <div class="minorderdiv">
                 <div><p>Total Cost</p></div>
-                <div><p id="totalcost">1646546</p></div>
+                <div><p id="totalcost">₹0</p></div>
             </div>
         </div>
         <br><br>
@@ -123,3 +125,6 @@
 </html>
 
 <script src="./scripts/cart.js"></script>
+<script src="./scripts//nav.js"></script>
+<!-- sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

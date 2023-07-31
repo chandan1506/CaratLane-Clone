@@ -204,3 +204,14 @@
     background-color: black;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+/* Center the preloader */
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 300px;
+    
+  }
+  

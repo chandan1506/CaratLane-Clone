@@ -39,7 +39,7 @@ body {
     color: black;
   }
   
-  button {
+  #btn {
     width: 150px;
     height: 40px;
     margin: 25px auto 0px auto;

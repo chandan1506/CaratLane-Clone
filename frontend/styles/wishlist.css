@@ -118,3 +118,13 @@
   ::-webkit-scrollbar-thumb:hover {
     background: black; 
   }
+
+  /* Center the preloader */
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 300px;
+    
+  }

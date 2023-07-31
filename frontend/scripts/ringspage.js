@@ -24,7 +24,9 @@ async function products() {
 // query="ring"
 products();
 
+let loader = document.getElementById("loader")
 function renderdata(data) {
+  loader.style.display = "none"
   let display = data.map((element) => {
     return `
       <div id="card">

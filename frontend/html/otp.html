@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="../styles/otp.css" />
     <script src="https://kit.fontawesome.com/ff29a3d799.js" crossorigin="anonymous"></script>
+        <!-- sweet alert -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script src="../scripts/nav.js"></script>
   </head>
   <body>
 
@@ -56,6 +59,7 @@
 
             <div class="navbar-top-content"><a href="../wishlist.html"><i class="fa-solid fa-heart"></i></a></div>
             <div class="navbar-top-content"><a href="../cart.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
+            <div class="navbar-top-content"><button id="logout">Logout</button></div>
         </div>
         <div class="navbar-bottom">
             <div><a href="../newarrival.html">NEW ARRIVALS</a></div>
@@ -120,7 +124,10 @@
 </html>
 
 <script>
-   alert("Your OTP : 12121")
+    swal(
+        "Your OTP : 12121",
+           "success"
+        );
   
 
   function fun() {
@@ -132,9 +139,14 @@
       document.getElementById("paydone").style.display = "block";
       document.querySelector(".loading").style.display = "none";
     }, 2000);
-    setTimeout(() => {
-      alert("payment successful");
+    setTimeout(async () => {
+     await swal(
+        "Payment Successfull",
+           "success"
+        );
       window.location.href = "../index.html";
     }, 3000);
   }
 </script>
+<!-- sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
