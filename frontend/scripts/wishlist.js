@@ -26,9 +26,10 @@ wishlist()
 
 
 
-
+let loader = document.getElementById("loader")
 function renderdata(data)
 {
+  loader.style.display = "none"
    let display=data.map((element)=>
    {
       return`

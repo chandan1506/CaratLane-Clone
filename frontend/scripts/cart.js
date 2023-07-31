@@ -19,14 +19,19 @@ async function Cart()
             }
         })
         let data=await res.json()
-        console.log(data)
+        // console.log(data)
         totalproduct.innerHTML= "Total Product: "+data.length
-        console.log(typeof data[0].price)
+        // console.log(typeof data[0].price)
         const producttotal = data.reduce(
             (accumulator, el) => (accumulator) + (el.price),0
             );
-            console.log(producttotal)
+            // console.log(producttotal)
             totalcost.innerHTML="₹"+producttotal
+            let saving = 2000
+            save.innerHTML = data.length*saving
+
+            subtotal.innerHTML = "₹"+(producttotal+Number(save.innerHTML))
+
         renderdata(data)
     } catch (error) {
         console.log(error)
@@ -37,9 +42,10 @@ Cart()
 
 
 
-
+let loader = document.getElementById("loader")
 function renderdata(data)
 {
+  loader.style.display = "none"
    let display=data.map((element)=>
    {
       return`
