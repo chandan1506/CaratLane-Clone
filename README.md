@@ -37,6 +37,9 @@ This is a CaratLane clone project where you can visit different pages like new a
 - Landing page
 - Signup and Login pages
 - Decent carousel
+- search functionality through Navbar
+- Logout Feature
+- Preloader
 - different Products page
 - Cart page
 - Wishlist page
@@ -59,6 +62,17 @@ https://github.com/chandan1506/CaratLane-Clone.git
 ```bash
   npm install
 ```
+### dependencies
+
+    "dependencies": {
+      "bcrypt": "^5.1.0",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2",
+      "jsonwebtoken": "^9.0.0",
+      "mongoose": "^6.8.4",
+      "nodemon": "^2.0.20"
+    }
 
 ### Runs the project in the development mode 
 
