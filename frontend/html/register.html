@@ -42,7 +42,7 @@ try{
         })
         const res = await register_request.json() 
         if(res.message == "User Registered"){
-            await swal(`${res.message}`,"success")
+            await swal(`${res.message}`,"","success")
         window.location.href ="./login.html"
         }else{
         

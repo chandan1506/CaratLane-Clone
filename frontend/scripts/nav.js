@@ -6,12 +6,13 @@
     logout.addEventListener("click",async ()=>{
       localStorage.clear("token")
       logout.style.display = "none"
-      await  swal(
-          "Logout Successfull",
-          "success"
-        );
-    })
-  }
+      await swal({
+         title: 'Are you sure?',
+         text: "You won't be able to revert this!",
+         icon: 'warning'
+         })
+       })
+    }
   
   
   
