@@ -43,6 +43,7 @@
             if(res.message == "login sucessfull"){
                 await  swal(
                     "Login Successfull",
+                    "",
                     "success"
                   );
                 localStorage.setItem("adminToken", res.adminToken)
