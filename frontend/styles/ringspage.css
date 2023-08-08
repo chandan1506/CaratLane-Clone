@@ -201,8 +201,7 @@
 }
 #addtocart:hover{
     cursor: pointer;
-    background-color: black;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgba(3, 109, 3, 0.61);
 }
 
 /* Center the preloader */

@@ -107,6 +107,7 @@ body {
     width:100%;
     letter-spacing: .11rem;
     outline:none;
+    cursor: pointer;
   }
   
   .button:hover

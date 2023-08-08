@@ -44,10 +44,6 @@
                     <span class="fa-solid fa-location-dot"></span>
                     <span> Pincode</span>
                 </a></div>
-            <!-- <div id="search_div" class="search_div">
-                <input type="text" id="search_book" placeholder="Search">
-                <button id="search_btn" onclick="searchfunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div> -->
             <div class="navbar-top-content" id="menu"><a href="#"><i class="fa-solid fa-user"></i></a>
             <div class="submenu">
                 <ul>
@@ -75,44 +71,22 @@
         </div>
     </div>
 
-    <img src="/image/tribawala-removebg-preview.png" alt="" id="logo" />
+    <img src="https://shorturl.at/eyAGT" alt="" id="logo" />
     <div class="container">
       <h1>ENTER OTP</h1>
       <div class="userinput">
-        <input
-          type="text"
-          maxlength="1"
-          id="ist"
-          onkeyup="clickEvent(this,'sec')"
-        />
-        <input
-          type="text"
-          maxlength="1"
-          id="sec"
-          onkeyup="clickEvent(this, 'third')"
-        />
-        <input
-          type="text"
-          maxlength="1"
-          id="third"
-          onkeyup="clickEvent(this, 'fourth')"
-        />
-        <input
-          type="text"
-          maxlength="1"
-          id="fourth"
-          onkeyup="clickEvent(this, 'fifth')"
-        />
-        <input type="text" maxlength="1" id="fifth" />
-      </div>
-      <button id="btn" onclick="fun()">Confirm</button>
+      <form id="Form" >
+        <input type="text" maxlength="1" id="first"  required/>
+        <input type="text" maxlength="1" id="second"  required/>
+        <input type="text" maxlength="1" id="third" required/>
+        <input type="text" maxlength="1" id="fourth" required/>
+        <input type="text" maxlength="1" id="fifth" required/>
+        <br>
+      <center><button type ="submit" id="btn">Confirm</button></center>
+    </form>
     </div>
-    <!-- <a href="../index.html"></a> -->
-    <img
-      src="https://assets.materialup.com/uploads/9ba2d687-d7d3-4361-8aee-7b2a3c074761/preview.gif"
-      alt=""
-      id="paydone"
-    />
+    </div>
+    <img id="paydone" src="https://assets.materialup.com/uploads/9ba2d687-d7d3-4361-8aee-7b2a3c074761/preview.gif" />
     <!-- loading-screen -->
     <div class="loading">
       <div class="liquid"></div>
@@ -124,15 +98,35 @@
 </html>
 
 <script>
+  let otp = Math.floor(Math.random()*90000)+10000
     swal(
-        "Your OTP : 12121",
+        `Your OTP:- ${otp}`,
           "",
           "success"
         );
   
+  let confirmBtn =  document.querySelector("#Form")
+  confirmBtn.addEventListener("submit",async (e)=>{
+    e.preventDefault()
+     
+    let sum="";
+    
+     let fir = document.getElementById("first")
+     fir = first.value
+     let sec = document.getElementById("second")
+     sec = sec.value
+     let thi = document.getElementById("third")
+     thi = thi.value
+     let fo = document.getElementById("fourth")
+     fo = fo.value
+     let fi = document.getElementById("fifth")
+     fi = fi.value
 
-  function fun() {
-    document.querySelector(".userinput").style.display = "none";
+     sum+=fir+sec+thi+fo+fi
+
+   if(otp == sum){
+    document.getElementById("logo").style.display = "none"
+    document.querySelector(".container").style.display = "none";
     document.querySelector("h1").style.display = "none";
     document.getElementById("btn").style.display = "none";
     document.querySelector(".loading").style.display = "block";
@@ -146,9 +140,16 @@
           "",
           "success"
         );
-      window.location.href = "../index.html";
+       window.location.href = "../index.html";
     }, 3000);
+  }else{
+    await swal(
+        "Oops!",
+          "OTP is wrong",
+          "error"
+        );
   }
+  })
 </script>
 <!-- sweet alert -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

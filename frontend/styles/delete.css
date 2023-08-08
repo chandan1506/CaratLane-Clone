@@ -53,7 +53,7 @@ margin-bottom: 20px;
 }
 .log-out{
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     right: 30px;
     left:40px
 }
@@ -151,7 +151,11 @@ form input,#role{
     border: 1px solid grey;
 }
 #submit-btn{
-    background-color:green
+    background-color:green;
+    cursor: pointer;
+}
+#submit-btn:hover{
+    background-color: rgba(3, 109, 3, 0.61)
 }
 #dob,#role{
     color:gray

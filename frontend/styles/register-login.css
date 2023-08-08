@@ -41,6 +41,9 @@ form input,#role{
     background-color:green;
     cursor:pointer
 }
+#submit-btn:hover{
+    background-color: rgba(3, 109, 3, 0.61)
+}
 
 .user-anchor{
     text-align: center;

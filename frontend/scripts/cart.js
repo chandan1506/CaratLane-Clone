@@ -1,12 +1,10 @@
-console.log("cart page")
+// console.log("cart page")
 
 
 let totalproduct=document.getElementById("totalproduct")
 let subtotal=document.getElementById("subtotal")
 let save=document.getElementById("save")
 let totalcost=document.getElementById("totalcost")
-
-
 
 
 async function Cart()
@@ -167,7 +165,11 @@ async function wishlistcard_data(id) {
 
   function checkout()
   {
+    if(save.innerHTML == 0 || save.innerHTML == "₹0"){
+      alert(" Plz add atleast one product... ")
+    }else{
     window.location.href="./html/payment.html"
+    }
   }
 
   
