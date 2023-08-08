@@ -56,7 +56,10 @@ height: 466px;
         color:white;
         border-radius: 7px;
     }
-    
+    #checkout:hover{
+        background-color: rgba(3, 109, 3, 0.61);
+        cursor: pointer;
+    }
     #renderdata{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -64,13 +67,11 @@ height: 466px;
         margin:auto
     }
     #card{
-        /* border:1px solid; */
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
     
     #image{
         width: 100%;
-        /* border: 1px solid; */
     }
     #trial{
         display: flex;
@@ -129,8 +130,7 @@ height: 466px;
     }
     #addtowishlist:hover{
         cursor: pointer;
-        background-color: black;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: rgba(3, 109, 3, 0.61)
     }
 
 
@@ -146,8 +146,7 @@ height: 466px;
 
     #remove:hover{
         cursor: pointer;
-        background-color: black;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: goldenrod
     }
 
     /* width */
