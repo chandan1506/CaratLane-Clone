@@ -108,7 +108,7 @@ https://github.com/chandan1506/CaratLane-Clone.git
 
 ## Demo
 
-https://jewelss.netlify.app
+https://jewels-frontend-4s.vercel.app
 
 
  ## Author
