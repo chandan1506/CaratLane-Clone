@@ -10,7 +10,7 @@ const { Createusermodel } = require("../models/user.model");
 const userrouter = express.Router();
 
 userrouter.post("/signup", async (req, res) => {
-  const { name, contact, password, email } = req.body;
+  const { name, password, email } = req.body;
 
   const user = await Createusermodel.find({ email });
   // console.log(user)
@@ -27,7 +27,6 @@ userrouter.post("/signup", async (req, res) => {
         else{
           const new_user = new Createusermodel({
             name,
-            contact,
             email,
             password: hash,
           });
