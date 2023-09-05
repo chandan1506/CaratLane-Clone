@@ -50,7 +50,7 @@ function renderdata(data)
       <div id="card">
                     <div id="cardtop">
                         <div>
-                            <p id="seller">${element.seller}</p>
+                            <p id="seller">${element.seller || ""}</p>
                         </div>
                         <div >
                             

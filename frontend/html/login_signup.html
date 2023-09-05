@@ -77,14 +77,14 @@
       <input type="checkbox" id="flip">
       <div class="cover">
         <div class="front">
-          <img src="../favicon/earring.jpg" alt="front">
+          <img src="../favicon/bracelet.jpg" alt="front">
           <div class="text">
             <span class="text-1">Every new friend is a <br> new adventure</span>
             <span class="text-2">Let's get connected</span>
           </div>
         </div>
         <!-- <div class="back">
-          <img class="backImg" src="https://shorturl.at/eyAGT" alt="back">
+          <img class="backImg" src="../favicon/earring.jpg" alt="back">
           <div class="text">
             <span class="text-1">Complete miles of journey <br> with one step</span>
             <span class="text-2">Let's get started</span>
@@ -118,16 +118,59 @@
                 <div class="button input-box">
                   <input type="submit" value="Submit">
                 </div>
+                <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+                <br>
+                <center><button style="cursor: pointer" onclick="window.location='http://localhost:6060/auth/google'">
+                 Continue with Google</button></center>
               </div>
           </form>
         </div>
+      <!-- ======================================signup========================================================  -->
+  
+          <div class="signup-form">
+            <div class="title">Signup</div>
+          <form id="signup-form-container" autocomplete="on">
+            <div id="owl-signup">
+              <div class="eyes"></div>
+              <div class="arm-up-right"></div>
+              <div class="arm-up-left"></div>
+              <div class="arm-down-left"></div>
+              <div class="arm-down-right"></div>
+            </div>
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input class="signup-name" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input class="signup-email" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                  <i class="fa-sharp fa-solid fa-phone"></i>
+                  <input class="signup-number" type="number" placeholder="Enter your Mobile Number" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input class="signup-password" type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="button input-box">
+                  <input type="submit" id="submit-btn">
+                </div>
+                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                <br>
+                <center><button style="cursor: pointer" onclick="window.location='http://localhost:6060/auth/google'">
+                 Continue with Google</button></center>
+              </div>
+        </form>
+      </div>
       </div>
       </div>
     </div>
   </main>
 </body>
 </html>
-<script src="../scripts/admin-login.js"></script>
+<script src="../scripts/login_signup.js"></script>
 <script src="../scripts/owl.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="../scripts/nav.js"></script>

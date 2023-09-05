@@ -1,3 +1,19 @@
+// Assuming the URL is: https://example.com/?name=John&age=25
+
+// Get the URL search parameters
+const urlParams = new URLSearchParams(window.location.search);
+
+// Get the value of a specific query parameter
+const username = urlParams.get('name');
+const token = urlParams.get('token');
+if(username && token){
+ 
+  localStorage.setItem("token", token)
+  ifUser()
+} 
+ 
+ 
+ 
  //logout feature//
 
  function ifUser(){
@@ -19,7 +35,7 @@
               //logout feature//
   window.addEventListener("load",()=>{
       let token = localStorage.getItem("token")
-      console.log(token)
+      // console.log(token)
       if(token){
           ifUser()
       } 

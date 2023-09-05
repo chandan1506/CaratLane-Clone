@@ -9,7 +9,7 @@ const {userwishlistrouter}=require("./routees/userwishlistrouter")
 const {adminRouter}=require("./routees/admin.router")
 const{authentication}=require("./middlewares/authenticationmiddleware")
 const cors = require('cors')
-
+const jwt = require("jsonwebtoken")
 
 const app=express()
 app.use(cors({
@@ -31,17 +31,31 @@ app.use("/adminproducts",adminproduct)
 app.use("/users",userrouter)
 
 
+// for payment 
+const { paymentRouter} = require("./routees/payment.router")
+app.use("/payment",paymentRouter)
+
+// google Oauth
+const passport = require("./config/google-Oauth")
+app.get('/auth/google',
+    passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+app.get('/auth/google/callback',
+    passport.authenticate('google', {
+        failureRedirect: 'http://127.0.0.1:5500/frontend/html/login_signup.html',
+        session: false
+    }),
+    function (req, res) {
+        // Successful authentication, redirect home.
+
+        const token = jwt.sign({ userID: req.user._id, name: req.user.name }, process.env.key)
+
+        res.redirect(`http://127.0.0.1:5500/frontend/index.html?name=${req.user.name}&token=${token}`)
+    });
 
 app.use(authentication)
 app.use("/cart",userCartrouter)
 app.use("/wishlist",userwishlistrouter)
-
-
-
-
-
-
-
 
 
 app.listen(process.env.port, async()=>
