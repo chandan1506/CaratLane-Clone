@@ -36,6 +36,9 @@ This is a CaratLane clone project where you can visit different pages like new a
 
 - Landing page
 - Signup and Login pages
+- JWT Authentication
+- Password hashing through bcrypt
+- Google Oauth
 - Decent carousel
 - search functionality through Navbar
 - Logout Feature
@@ -65,13 +68,17 @@ https://github.com/chandan1506/CaratLane-Clone.git
 ### dependencies
 
     "dependencies": {
-      "bcrypt": "^5.1.0",
-      "cors": "^2.8.5",
-      "dotenv": "^16.0.3",
-      "express": "^4.18.2",
-      "jsonwebtoken": "^9.0.0",
-      "mongoose": "^6.8.4",
-      "nodemon": "^2.0.20"
+       "axios": "^1.4.0",
+       "bcrypt": "^5.1.0",
+       "cors": "^2.8.5",
+       "dotenv": "^16.0.3",
+       "express": "^4.18.2",
+       "jsonwebtoken": "^9.0.0",
+       "mongoose": "^6.8.4",
+       "nodemon": "^2.0.20",
+       "passport": "^0.6.0",
+       "passport-google-oauth2": "^0.2.0",
+       "uuid": "^9.0.0"
     }
 
 ### Runs the project in the development mode 
@@ -90,18 +97,30 @@ https://github.com/chandan1506/CaratLane-Clone.git
 
 `port`
 
+`GOOGLE_CLIENT_ID`
+
+`GOOGLE_CLIENT_SECRET`
+
 
 ## Project Highlights
 
+## 1. Login Page
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-144_4.png" />
+
+## 2. Product Page
 <img width="90%" src="https://www.linkpicture.com/q/Screenshot-101_3.png" />
 
+## 3. Wishlist Page
 <img width="90%" src="https://www.linkpicture.com/q/Screenshot-95_8.png" />
 
+## 4. Cart Page
 <img width="90%" src="https://www.linkpicture.com/q/Screenshot-89_1.png" />
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-92_6.png" />
+## 5. Payment Page
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-145.png" />
 
-<img width="90%" src="https://www.linkpicture.com/q/Screenshot-98_3.png" />
+## 6. OTP Page
+<img width="90%" src="https://www.linkpicture.com/q/Screenshot-146_2.png" />
 
 <img width="90%" src="https://www.linkpicture.com/q/Screenshot-99_5.png" />
 
