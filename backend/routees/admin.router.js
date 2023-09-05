@@ -7,7 +7,7 @@ var jwt = require('jsonwebtoken');
 
 
 adminRouter.post("/signup", async (req, res) => {
-    const { name, contact, password, email } = req.body;
+    const { name, password, email } = req.body;
   
     const user = await Adminmodel.find({ email });
     // console.log(user)
@@ -24,7 +24,6 @@ adminRouter.post("/signup", async (req, res) => {
           else{
             const new_user = new Adminmodel({
               name,
-              contact,
               email,
               password: hash,
             });

@@ -42,7 +42,7 @@ app.get('/auth/google',
 
 app.get('/auth/google/callback',
     passport.authenticate('google', {
-        failureRedirect: 'http://127.0.0.1:5500/frontend/html/login_signup.html',
+        failureRedirect: 'https://jewels-frontend-4s.vercel.app/html/login_signup.html',
         session: false
     }),
     function (req, res) {
@@ -50,7 +50,7 @@ app.get('/auth/google/callback',
 
         const token = jwt.sign({ userID: req.user._id, name: req.user.name }, process.env.key)
 
-        res.redirect(`http://127.0.0.1:5500/frontend/index.html?name=${req.user.name}&token=${token}`)
+        res.redirect(`https://jewels-frontend-4s.vercel.app?name=${req.user.name}&token=${token}`)
     });
 
 app.use(authentication)
