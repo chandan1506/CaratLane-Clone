@@ -4,9 +4,8 @@ registerForm.addEventListener("submit",async (e)=>{
 e.preventDefault()
 let name = document.querySelector(".signup-name").value;
 let email = document.querySelector(".signup-email").value;
-let contact = document.querySelector(".signup-number").value;
 let password = document.querySelector(".signup-password").value;
-let userObj = { name, email, contact, password };
+let userObj = { name, email, password };
 try{
         let register_request = await fetch("https://angry-turtleneck-lamb.cyclic.app/users/signup",{
             method:"POST",
