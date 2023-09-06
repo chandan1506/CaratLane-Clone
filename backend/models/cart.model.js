@@ -1,5 +1,7 @@
+// mongoose
 const mongoose=require("mongoose")
 
+// defining Schema
 const createcartSchema=mongoose.Schema({
    
     image:String,
@@ -16,10 +18,10 @@ const createcartSchema=mongoose.Schema({
     userID:String
 })
 
-
+// Defining Model
 const Createcartmodel=mongoose.model("cart",createcartSchema)
 
-
+// exporting
 module.exports={
     Createcartmodel
 }

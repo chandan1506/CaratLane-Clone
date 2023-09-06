@@ -1,5 +1,7 @@
+// mongoose
 const mongoose=require("mongoose")
 
+// Defining Schema
 const createwishlistSchema=mongoose.Schema({
    
     image:String,
@@ -16,10 +18,10 @@ const createwishlistSchema=mongoose.Schema({
     userID:String
 })
 
-
+// Defining Model
 const Createwishlistmodel=mongoose.model("wishlist",createwishlistSchema)
 
-
+// exporting
 module.exports={
     Createwishlistmodel
 }

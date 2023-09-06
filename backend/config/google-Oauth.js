@@ -1,10 +1,16 @@
+// dotenv
 require('dotenv').config()
+// passport
 const passport = require("passport")
+// uuid
 const { v4: uuidv4 } = require('uuid');
+// importing model
 const { Createusermodel } = require("../models/user.model")
 
+// GoogleStrategy 
 const GoogleStrategy = require('passport-google-oauth2').Strategy;
 
+// middleware
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -30,4 +36,5 @@ passport.use(new GoogleStrategy({
   
 ));
 
+// exporting
 module.exports = passport;

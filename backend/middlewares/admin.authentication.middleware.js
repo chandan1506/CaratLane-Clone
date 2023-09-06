@@ -1,6 +1,9 @@
+// jwt
 var jwt = require('jsonwebtoken');
+// dotenv
 require('dotenv').config()
 
+// admin authentication middleware
 const admin_authentication=(req,res,next)=>
 {
     const adminToken =req.headers.authorization
@@ -21,7 +24,7 @@ const admin_authentication=(req,res,next)=>
     }
 }
 
-
+// exporting
 module.exports={
     admin_authentication
 }

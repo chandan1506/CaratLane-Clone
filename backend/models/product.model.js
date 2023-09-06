@@ -1,5 +1,7 @@
+// mongoose
 const mongoose=require("mongoose")
 
+// Defining Schema
 const createproductSchema=mongoose.Schema({
     image:String,
     name:String,
@@ -14,10 +16,10 @@ const createproductSchema=mongoose.Schema({
     livecall:String
 })
 
-
+// Defining Model
 const Createproductmodel=mongoose.model("products",createproductSchema)
 
-
+// exporting
 module.exports={
     Createproductmodel
 }

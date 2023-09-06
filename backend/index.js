@@ -1,39 +1,43 @@
+// express
 const express=require("express")
-const {connection}=require("./config/db")
-require("dotenv").config
-const{userrouter}=require("./routees/userrouter")
-const{adminproduct}=require("./routees/adminproduct.router")
-const {userrender}=require("./routees/userrenderrouter")
-const {userCartrouter}=require("./routees/usercartrouter")
-const {userwishlistrouter}=require("./routees/userwishlistrouter")
-const {adminRouter}=require("./routees/admin.router")
-const{authentication}=require("./middlewares/authenticationmiddleware")
-const cors = require('cors')
-const jwt = require("jsonwebtoken")
-
 const app=express()
+app.use(express.json())
+// connection
+const {connection}=require("./config/db")
+// dotenv
+require("dotenv").config
+
+// for user
+const{userrouter}=require("./routees/userrouter")
+app.use("/users",userrouter)
+const {userrender}=require("./routees/userrenderrouter")
+app.use("/usersrender", userrender)
+
+// for admin
+const {adminRouter}=require("./routees/admin.router")
+app.use("/admin",adminRouter)
+const{adminproduct}=require("./routees/adminproduct.router")
+app.use("/adminproducts",adminproduct)
+// for payment 
+const { paymentRouter} = require("./routees/payment.router")
+app.use("/payment",paymentRouter)
+
+// authentication middleware
+const{authentication}=require("./middlewares/authenticationmiddleware")
+
+// cors
+const cors = require('cors')
 app.use(cors({
     origin:"*"
 }))
-app.use(express.json())
+// jwt
+const jwt = require("jsonwebtoken")
 
+// HomePage routes
 app.get("/",(req,res)=>
 {
     res.send({"message":"welcome to HOME PAGE"})
 })
-app.use("/admin",adminRouter)
-
-app.use("/usersrender", userrender)
-app.use("/adminproducts",adminproduct)
-
-
-
-app.use("/users",userrouter)
-
-
-// for payment 
-const { paymentRouter} = require("./routees/payment.router")
-app.use("/payment",paymentRouter)
 
 // google Oauth
 const passport = require("./config/google-Oauth")
@@ -53,11 +57,15 @@ app.get('/auth/google/callback',
         res.redirect(`https://jewels-frontend-4s.vercel.app?name=${req.user.name}&token=${token}`)
     });
 
+
+// routes
+const {userCartrouter}=require("./routees/usercartrouter")
+const {userwishlistrouter}=require("./routees/userwishlistrouter")    
 app.use(authentication)
 app.use("/cart",userCartrouter)
 app.use("/wishlist",userwishlistrouter)
 
-
+// establishing server connection
 app.listen(process.env.port, async()=>
 {
     try {

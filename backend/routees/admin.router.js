@@ -1,11 +1,17 @@
+// creating router
 const express = require("express")
 const adminRouter = express.Router()
+// importing model
 const {Adminmodel} = require("../models/admin.model")
+// dotenv
 require('dotenv').config()
+// bcrypt
 const bcrypt = require("bcrypt");
+// jwt
 var jwt = require('jsonwebtoken');
 
 
+// admin signup
 adminRouter.post("/signup", async (req, res) => {
     const { name, password, email } = req.body;
   
@@ -39,6 +45,7 @@ adminRouter.post("/signup", async (req, res) => {
     }
   });
 
+  // admin login
 adminRouter.post("/login", async (req, res) => {
     const { email, password } = req.body;
      //console.log(email)
@@ -67,4 +74,5 @@ adminRouter.post("/login", async (req, res) => {
   });
 
 
+  // exporting
 module.exports = {adminRouter} 
