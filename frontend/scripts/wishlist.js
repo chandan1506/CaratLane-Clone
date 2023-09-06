@@ -2,7 +2,7 @@ console.log("wish list page")
 
 let totalproduct=document.getElementById("totalproduct")
 
-
+// fetching all wishlist products
 async function wishlist()
 {
     try {
@@ -21,11 +21,10 @@ async function wishlist()
     }
 }
 
-
 wishlist()
 
 
-
+// rendering all wishlist products
 let loader = document.getElementById("loader")
 function renderdata(data)
 {
@@ -82,9 +81,7 @@ function renderdata(data)
     }
 }
 
-
-
-
+// fetching product by product id
 async function cartcard_data(id) {
     console.log(id);
     try {
@@ -100,6 +97,7 @@ async function cartcard_data(id) {
     }
   }
   
+    // adding product in to cart
   async function addtocart(data) {
     try {
       console.log("function add to wishlist");
@@ -121,8 +119,7 @@ async function cartcard_data(id) {
     }
   }
 
-
-
+  // remove wishlist product
   async function removeproduct(id) {
     try {
         console.log("try catch function")
