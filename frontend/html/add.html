@@ -93,6 +93,7 @@
 </html>
 <script>
     let bag = [];
+    // fetching products
     async function products() {
         try {
             let res = await fetch(`https://angry-turtleneck-lamb.cyclic.app/adminproducts/products`)
@@ -106,7 +107,7 @@
     }
     products()
 
-
+  // rendering products
     function renderdata(bag) {
         let display = bag.map((element) => {
             return `
@@ -137,7 +138,8 @@
 
         document.querySelector(".fetchdata").innerHTML = display.join(" ")
     }
-
+   
+    // adding product
     let createForm = document.getElementById("create")
     createForm.addEventListener("submit", async (e) => {
         e.preventDefault()

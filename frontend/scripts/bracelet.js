@@ -2,6 +2,7 @@
 
 console.log("product page");
 
+// fetching products with query of product type
 let query = "bracelet";
 async function products() {
   try {
@@ -24,6 +25,7 @@ async function products() {
 // query="ring"
 products();
 
+// rendering all products
 let loader = document.getElementById("loader")
 function renderdata(data) {
   loader.style.display = "none"
@@ -79,6 +81,7 @@ function renderdata(data) {
   }
 }
 
+// fetching product by product id for cart
 async function cartcard_data(id) {
   console.log(id);
   try {
@@ -93,6 +96,7 @@ async function cartcard_data(id) {
   }
 }
 
+// adding fetched product in to cart
 async function addtocart(data) {
   try {
     console.log("inside post");
@@ -112,6 +116,7 @@ async function addtocart(data) {
   } catch (error) {}
 }
 
+// fetching product by product id for wishlist
 async function wishlistcard_data(id) {
   console.log(id);
   try {
@@ -127,6 +132,7 @@ async function wishlistcard_data(id) {
   }
 }
 
+// adding fetched product in to wishlist
 async function addtowishlist(data) {
   try {
     console.log("function add to wishlist");
@@ -148,6 +154,7 @@ async function addtowishlist(data) {
   }
 }
 
+// sorting products by price
 let sort = document.getElementById("sort");
 sort.addEventListener("click", () => {
   sorting();

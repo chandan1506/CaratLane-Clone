@@ -6,7 +6,7 @@ let subtotal=document.getElementById("subtotal")
 let save=document.getElementById("save")
 let totalcost=document.getElementById("totalcost")
 
-
+// fetching all cart products
 async function Cart()
 {
     try {
@@ -38,8 +38,7 @@ async function Cart()
 
 Cart()
 
-
-
+// rendering all cart products
 let loader = document.getElementById("loader")
 function renderdata(data)
 {
@@ -96,9 +95,7 @@ function renderdata(data)
     }
 }
 
-
-
-
+// fetching product by product id
 async function wishlistcard_data(id) {
     console.log(id);
     try {
@@ -114,6 +111,7 @@ async function wishlistcard_data(id) {
     }
   }
   
+  // adding product in to wishlist
   async function addtowishlist(data) {
     try {
       console.log("function add to wishlist");
@@ -135,8 +133,7 @@ async function wishlistcard_data(id) {
     }
   }
 
-
-
+  // remove cart product
   async function removeproduct(id) {
     try {
         console.log("try catch function")
@@ -161,8 +158,7 @@ async function wishlistcard_data(id) {
     }
   }
 
-
-
+// checkout btn
   function checkout()
   {
     if(save.innerHTML == 0 || save.innerHTML == "₹0"){
