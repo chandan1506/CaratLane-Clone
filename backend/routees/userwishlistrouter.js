@@ -1,9 +1,11 @@
+// creating router
 const express=require("express")
-const {Createproductmodel}=require("../models/product.model")
+userwishlistrouter=express.Router()
+// importing model
 const{Createwishlistmodel}=require("../models/wishlist.model")
 
-userwishlistrouter=express.Router()
 
+// get all wishlist products
 userwishlistrouter.get("/", async(req,res)=>
 {
     const ID = req.body.userID;
@@ -18,7 +20,7 @@ userwishlistrouter.get("/", async(req,res)=>
     
 })
 
-
+// creating wishlist product
 userwishlistrouter.post("/createwihslist", async(req,res)=>
  {
     let payload=req.body
@@ -39,8 +41,7 @@ userwishlistrouter.post("/createwihslist", async(req,res)=>
     
  })
 
-
-
+// deleting wishlist product
  userwishlistrouter.delete("/delete/:id", async (req, res) => {
     const ID = req.params.id;
     const wishlistitem=await Createwishlistmodel.findOne({_id:ID})
@@ -62,6 +63,8 @@ userwishlistrouter.post("/createwihslist", async(req,res)=>
     }
   });
 
+
+// exporting  
 module.exports={
     userwishlistrouter
 }

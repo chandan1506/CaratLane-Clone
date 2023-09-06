@@ -1,9 +1,10 @@
+// creating router
 const express=require("express")
-const {Createproductmodel}=require("../models/product.model")
-const {Createcartmodel}=require("../models/cart.model")
-const { application } = require("express")
 userCartrouter=express.Router()
+// importing model
+const {Createcartmodel}=require("../models/cart.model")
 
+// get all cart product
 userCartrouter.get("/", async(req,res)=>
 {
     const ID = req.body.userID;
@@ -20,7 +21,7 @@ userCartrouter.get("/", async(req,res)=>
     
 })
 
-
+// creating cart product
 userCartrouter.post("/createcart", async(req,res)=>
  {
     let payload=req.body
@@ -39,7 +40,7 @@ userCartrouter.post("/createcart", async(req,res)=>
     
  })
 
-
+// deleting cart product
  userCartrouter.delete("/delete/:id", async (req, res) => {
     const ID = req.params.id;
     const cartitem=await Createcartmodel.findOne({_id:ID})
@@ -62,7 +63,7 @@ userCartrouter.post("/createcart", async(req,res)=>
   });
 
 
-
+// exporting
 module.exports={
     userCartrouter
 }

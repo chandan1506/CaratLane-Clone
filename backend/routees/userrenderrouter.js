@@ -1,10 +1,10 @@
+// creating router
 const express=require("express")
+const userrender=express.Router()
+// importing model
 const { Createproductmodel } = require("../models/product.model")
 
-const userrender=express.Router()
-
-
-
+// get all products
 userrender.get("/products",async(req,res)=>
 {
     let data=req.query
@@ -18,6 +18,7 @@ userrender.get("/products",async(req,res)=>
   
 })
 
+// get particular product by product id
 userrender.get("/productbyid/:id",async(req,res)=>
 {
     let id=req.params.id
@@ -29,6 +30,7 @@ userrender.get("/productbyid/:id",async(req,res)=>
     }
 })
 
+// filtering by price
 userrender.get("/filterbyprice",async(req,res)=>
 {
     // let data=req.query
@@ -125,8 +127,6 @@ userrender.get("/filterbyprice",async(req,res)=>
 
 
 // Filtering by product type
-
-
 userrender.get("/filterbytype",async(req,res)=>
 {
     let type=req.query
@@ -162,7 +162,6 @@ userrender.get("/filterbytype",async(req,res)=>
 
 
 // sorting data
-
 userrender.get("/sorting",async(req,res)=>
 {   const query=req.query
 
@@ -187,9 +186,10 @@ userrender.get("/sorting",async(req,res)=>
         }
     }
     
-    
 })
 
+
+// exporting
 module.exports={
     userrender
 }

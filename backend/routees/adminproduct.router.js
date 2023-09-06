@@ -1,9 +1,11 @@
+// creating router
 const express=require("express")
-const { Createproductmodel } = require("../models/product.model")
 const adminproduct=express.Router()
+// importing model
+const { Createproductmodel } = require("../models/product.model")
 //const {admin_authentication} = require("../middlewares/admin.authentication.middleware")
 
-
+// getting all products
 adminproduct.get("/products",async(req,res)=>
 {
     try {
@@ -17,6 +19,7 @@ adminproduct.get("/products",async(req,res)=>
 
 //  adminproduct.use(admin_authentication)
 
+// creating product
 adminproduct.post("/create" ,async(req,res)=>
 {
     payload=req.body
@@ -29,12 +32,10 @@ adminproduct.post("/create" ,async(req,res)=>
         res.send(' new products added')
     } catch (error) {
         res.send("Cannot Create new Product")
-    }
-
-   
+    } 
 })
 
-
+// updating
 adminproduct.patch("/update/:id", async(req,res)=>{
     const ID=req.params.id
     const payload=req.body
@@ -49,7 +50,7 @@ adminproduct.patch("/update/:id", async(req,res)=>{
   
 })
 
-
+// deleting
 adminproduct.delete("/delete/:id", async(req,res)=>
 {
     const ID=req.params.id
@@ -64,6 +65,8 @@ adminproduct.delete("/delete/:id", async(req,res)=>
     
 })
 
+
+// exporting
 module.exports={
     adminproduct
 }

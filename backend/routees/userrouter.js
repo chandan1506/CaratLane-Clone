@@ -1,14 +1,17 @@
+// creating router
 const express = require("express");
+const userrouter = express.Router();
+// bcrypt
 const bcrypt = require("bcrypt");
+// jwt
 var jwt = require('jsonwebtoken');
+// dotenv
 require('dotenv').config()
-
-
-
+// importing model
 const { Createusermodel } = require("../models/user.model");
 
-const userrouter = express.Router();
 
+// user signup
 userrouter.post("/signup", async (req, res) => {
   const { name, password, email } = req.body;
 
@@ -42,6 +45,7 @@ userrouter.post("/signup", async (req, res) => {
   }
 });
 
+// user login
 userrouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
   // console.log(email)
@@ -64,6 +68,9 @@ userrouter.post("/login", async (req, res) => {
     res.send(error);
   }
 });
+
+
+// exporting
 module.exports = {
   userrouter
 };
